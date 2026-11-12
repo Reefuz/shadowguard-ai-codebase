@@ -1,0 +1,1 @@
+export async function apiGet<T>(path:string):Promise<T>{const r=await fetch(`/api/${path}`,{cache:"no-store"});if(!r.ok)throw new Error(`API request failed: ${r.status}`);return r.json() as Promise<T>}
